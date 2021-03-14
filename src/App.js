@@ -5,6 +5,7 @@ import './App.css';
 
 function App() {
   const [countries, setCountries] = useState( [] );
+  const [country, setCountry] = useState( "worldwide" );
 
 
   useEffect( () => {
@@ -24,15 +25,21 @@ function App() {
     }
     getCountries();
 
-  } ,[]);
+  }, [] );
 
+  const onCountryChange = ( e ) => {
+    const countryCode = e.target.value;
+
+    setCountry( countryCode );
+
+  }
   return (
     <div className="app">
       <div className="app__header">
         <h1>COVID-19 TRACKER</h1>
         <FormControl className="app__dropdown">
-          <Select variant="outlined" value="abc">
-            {/* Loop through all the countries and show dropdown list of the options using useState */}
+          <Select variant="outlined" onChange={onCountryChange} value={country}  >
+            <MenuItem value="worldwide">Worldwide</MenuItem>
 
             {
               countries.map( country => (
@@ -44,12 +51,10 @@ function App() {
       </div>
 
 
-      {/* Header */}
-      {/* Title + select input dropdown */}
-
 
 
       {/* InfoBoxes */}
+            
       {/* InfoBoxes */}
       {/* InfoBoxes */}
 
