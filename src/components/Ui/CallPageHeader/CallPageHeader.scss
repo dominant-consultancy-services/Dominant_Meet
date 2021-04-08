@@ -1,0 +1,51 @@
+.frame-header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 350px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #fff;
+    border-radius: 0 0 0 14px;
+    overflow: hidden;
+    .header-items{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 60px;
+        flex: 1;
+        border-right: 1px solid rgb(245,245,245);
+        position: relative;
+        .alert-circle-icon{
+            position: absolute;
+            background: #F66704;
+            width: 9px;
+            height: 9px;
+            border-radius: 50%;
+            border: 2px solid #fff;
+            top: 15px;
+            right: 23px;
+        }
+        &.date-block{
+            font-size: 22px;
+            color: #5f6368;
+            min-width: 120px;
+            font-weight: 400;
+        }
+        &.icon-block{
+            .icon{
+                color: #505357;
+                font-size: 22px;
+                &.profile{
+                    font-size: 32px;
+                    color: #F66704;
+                }
+            }
+            &:hover{
+                cursor: pointer;
+                background: #f8ece3;
+            }
+        }
+    }
+}
