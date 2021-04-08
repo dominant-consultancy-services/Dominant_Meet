@@ -11,12 +11,12 @@ function App() {
         <Route exact path="/:id">
           <CallPage />
         </Route>
-        {/* <Route exact path="/">
+         <Route exact path="/">
           <HomePage/>
         </Route>
         <Route exact path="*">
           <NoMatch/>
-        </Route> */}
+        </Route> 
       </Switch>
     </Router>
   );
