@@ -34,4 +34,4 @@ export const deleteRequest = async (url) => {
             { error: err.response.data }
         ));
     return data;
-        }   
+}
