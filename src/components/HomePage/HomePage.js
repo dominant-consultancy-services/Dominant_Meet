@@ -1,12 +1,20 @@
+import {useHistory} from "react-router-dom";
 import React from 'react';
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {
     faVideo,faKeyboard
 } from "@fortawesome/free-solid-svg-icons";
+import shortid from "shortid";
 import Header from '../Ui/Header/Header';
 import './HomePage.scss';
 
 const HomePage = () => {
+    const history = useHistory();
+    const startCall = () =>{
+        const uid = shortid.generate();
+        history.push(`/${uid}#init`);
+    }
+
     return (
         <div className="home-page">
             <Header/>
@@ -16,7 +24,7 @@ const HomePage = () => {
                         <h2>Premium video meetings. Now free for everyone.</h2>
                         <p>We re-engineered the service we built for secure business meetings, Google Meet, to make it free and available for all.</p>
                         <div className="action-btn">
-                            <button className="btn green">
+                            <button className="btn green" onClick={startCall}>
                             <FontAwesomeIcon className="icon-block" icon={faVideo}/>
                             New Meeting
                             </button>
