@@ -5,7 +5,7 @@ import {
   BASE_URL,
   GET_CALL_ID,
   SAVE_CALL_ID,
-} from "./../../utils/appEndPoints";
+} from "../../utils/apiEndpoints";
 import io from "socket.io-client";
 import Peer from "simple-peer";
 import "./CallPage.scss";
