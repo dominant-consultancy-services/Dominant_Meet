@@ -28,7 +28,7 @@ const CallPage = () => {
             <CallPageHeader/>
              <CallPageFooter/>
              {(isAdmin && meetInfoPopup)&&(
-               <MeetingInfo/>
+               <MeetingInfo setMeetInfoPopup={setMeetInfoPopup} url={url}/>
              )}
             
             <Messenger/> 
